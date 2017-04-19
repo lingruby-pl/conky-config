@@ -1,0 +1,1 @@
+For arch: /usr/share/fonts/TTF (copy&paste ttf file)

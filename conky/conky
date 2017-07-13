@@ -60,7 +60,7 @@ own_window_argb_visual no
 own_window_colour 00000000
 TEXT
 ${color6}${hr 2}${image /home/lingruby/.conky/conky/archlinux-logo-light-800_black_logo.png -p 0,20 -s 50x50}${image /home/lingruby/.conky/conky/Heckert_GNU_white.png -p 254,20 -s 50x50}
-${color4}$alignc Parabola Arch i3-wm Linux rolling
+${color4}$alignc  Arch i3-wm Linux rolling
 ${color4}$alignc Prosta, lekka dystrybucja Linuksa
  
 ${color4}$alignc Czas pracy:  $uptime

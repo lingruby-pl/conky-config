@@ -65,5 +65,5 @@ ${font xos4 Terminus:bold:pixelsize=12}${color0}     mod+Shift+p  ${color1}-  po
 
 
 
-${font GE Inspira:bold:pixelsize=30}${color0} Arch i3-wm ${color}Linux rolling. ${color0}${font GE Inspira:bold:pixelsize=15}${color1} Prosta, lekka dystrybucja Linuksa.
+${font GE Inspira:bold:pixelsize=30}${color0} Arch-i3 ${color}Linux rolling. ${color0}${font GE Inspira:bold:pixelsize=15}${color1} Prosta, lekka dystrybucja Linuksa.
 

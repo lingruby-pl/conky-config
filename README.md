@@ -3,4 +3,4 @@ My conky config i3
 
 conky_start.sh
 
-![ScreenShot](Zaznaczenie_814.png "conky-config")
+![ScreenShot](screenshot.1.png "conky-config")

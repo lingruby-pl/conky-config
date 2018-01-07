@@ -3,7 +3,7 @@
 #author: Brahim Salem-Tunisia
 #telephone: 00216 97 95 72 72
 #========================================================================
-#Conky Arch/Parabole i3-wm Linux
+#Conky Anarchy i3-wm Linux rolling
 #mod: LinGruby
 #========================================================================
 
@@ -26,7 +26,10 @@ maximum_width 303
 own_window yes
 own_window_type override
 own_window_transparent yes
-own_window_hints undecorated,sticky,below,skip_taskbar,skip_pager
+own_window_hints undecorated,sticky,below,skip_taskbar,skip_pager]
+own_window_argb_value 0
+own_window_argb_visual no
+own_window_colour 00000000
 border_inner_margin 0
 border_outer_margin 0
 alignment top_right
@@ -44,24 +47,22 @@ uppercase no
 
 
 default_color DCDCDC
-color0 5294e2	
-color1 999999		
+color0 1b93d1	
+color1 999999	
 color2 a7a8a8	
 color3 ff0000	
-color4 DCDCDC
-color5 5294e2
-color6 999999
-color7 777777
-color8 555555
-color9 DCDCDC
+color4 DCDCDC	
+color5 1b93d1	
+color6 999999	
+color7 777777	
+color8 555555	
+color9 DCDCDC	
 
-own_window_argb_value 0
-own_window_argb_visual no
-own_window_colour 00000000
+
 TEXT
-${color6}${hr 2}${image /home/lingruby/.conky/conky/archlinux-logo-light-800_black_logo.png -p 0,20 -s 50x50}${image /home/lingruby/.conky/conky/Heckert_GNU_white.png -p 254,20 -s 50x50}
-${color4}$alignc  Arch-i3 Linux rolling
-${color4}$alignc Prosta, lekka dystrybucja Linuksa
+${color6}${hr 2}${image /home/lingruby/.conky/conky/anarchy-icon.png -p 0,20 -s 50x50}${image /home/lingruby/.conky/conky/Heckert_GNU_white.png -p 254,20 -s 50x50}
+${color4}$alignc  Anarchy i3-wm Linux rolling
+${color4}$alignc Lekka i elastyczna dystrybucja 
  
 ${color4}$alignc Czas pracy:  $uptime
  
@@ -76,7 +77,7 @@ ${color4}Procesor i Pamięć ${color6}${hr 2}
 ${color1}Użycie procesora  ${color0}$alignc ${cpubar 3,81} $alignr ${color1}$cpu% @ ${freq_g cpu}GHz
 ${color1}Core1:  ${color0}${cpubar cpu0 3,55}  ${color1}${cpu cpu0}% $alignr${color1}${cpu cpu2}%  ${color0}${cpubar cpu2 3,55}${color1}  :Core3
 ${color1}Core2:  ${color0}${cpubar cpu1 3,55}  ${color1}${cpu cpu1}% $alignr${color1}${cpu cpu3}%  ${color0}${cpubar cpu3 3,55}${color1}  :Core4
-${color1}${cpugraph 15,303 000000 5294e2}
+${color1}${cpugraph 15,303 000000 1b93d1}
 ${color4}Pamięć RAM ${alignr}${color1}$mem / $memmax ($memperc%)
 ${color0}${membar 3}
 ${color4}Pamięć SWAP ${alignr}${color1}$swap / $swapmax ($swapperc%)
@@ -93,22 +94,22 @@ ${color0}${battery_bar 3,303 BAT1}
 ${color4}Dysk ${color6}${hr 2}
 ${color6}Linux: ${color1} (${fs_type})    ${alignc}${color1}${fs_size /} > ${color1}${fs_used /}${color0} ${alignr}${fs_bar 3,50} ${color6}(${fs_used_perc /}%)
 ${color4}Dysk Zapis-> ${alignc}${color2}${diskio_read}/s ${alignr}${color2}${diskio_write}/s ${color4}<-Dysk Odczyt
-${color1}${diskiograph_read 15,140 000000 5294e2} ${alignr}${color1}${diskiograph_write 15,140 000000 434745}$color
+${color1}${diskiograph_read 15,140 000000 1b93d1} ${alignr}${color1}${diskiograph_write 15,140 000000 434745}$color
 ${color4}Ethernet ${color6}${hr 2}
 ${alignc}${color4}IP: ${color1}${addr enp1s0f1}
 ${color4}Pobieranie:  ${color2}${downspeed enp1s0f1}  ${alignr} $alignr ${color2} ${upspeed enp1s0f1}  ${color4}:Wysyłanie
-${color}${downspeedgraph enp1s0f1 15,140 000000 5294e2} ${alignr}${color}${upspeedgraph enp1s0f1 15,140 000000 434745}
+${color}${downspeedgraph enp1s0f1 15,140 000000 1b93d1} ${alignr}${color}${upspeedgraph enp1s0f1 15,140 000000 434745}
 ${color6}Pobrane: ${color4}${totaldown enp1s0f1} ${alignr}${color4}${totalup enp1s0f1} ${color6}:Wysłane
 ${color4}OpenVPN ${color6}${hr 2}
 ${alignc}${color4}IP: ${color1}${addr tun0}
 ${color4}Pobieranie:  ${color2}${downspeed tun0}  ${alignr} $alignr ${color2} ${upspeed tun0}  ${color4}:Wysyłanie
-${color}${downspeedgraph tun0 15,140 000000 5294e2} ${alignr}${color}${upspeedgraph tun0 15,140 000000 434745}
+${color}${downspeedgraph tun0 15,140 000000 1b93d1} ${alignr}${color}${upspeedgraph tun0 15,140 000000 434745}
 ${color6}Pobrane: ${color4}${totaldown tun0} ${alignr}${color4}${totalup tun0} ${color6}:Wysłane
 ${color4}Wi-Fi ${color6}${hr 2}
 ${alignc}${color4}IP: ${color1}${addr wlp2s0}
 ${color6}Nazwa:  ${color1}${wireless_essid wlp2s0}  ${alignr}${color6}Prędkość:  ${color1}${wireless_bitrate wlp2s0} 
 ${color1}${alignc}${color7}Sygnał:  ${color1}${wireless_link_qual_perc wlp2s0}%   ${color0}${wireless_link_bar 3,75 wlp2s0}
 ${color4}Pobieranie:  ${color2}${downspeed wlp2s0}  ${alignr} $alignr ${color2} ${upspeed wlp2s0}  ${color4}:Wysyłanie
-${color}${downspeedgraph wlp2s0 15,140 000000 5294e2} ${alignr}${color}${upspeedgraph wlp2s0 15,140 000000 434745}
+${color}${downspeedgraph wlp2s0 15,140 000000 1b93d1} ${alignr}${color}${upspeedgraph wlp2s0 15,140 000000 434745}
 ${color6}Pobrane: ${color4}${totaldown wlp2s0} ${alignr}${color4}${totalup wlp2s0} ${color6}:Wysłane
 ${color6}${hr 2}

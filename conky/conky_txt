@@ -3,7 +3,7 @@
 #author: Brahim Salem-Tunisia
 #telephone: 00216 97 95 72 72
 #========================================================================
-#Conky Arch/Parabole i3-wm Linux
+#Conky Anarchy i3-wm Linux rolling
 #mod: LinGruby
 #========================================================================
 
@@ -17,13 +17,16 @@ no_buffers yes
 text_buffer_size 2048
 
 gap_x 20
-gap_y 460
+gap_y 343
 minimum_size 750 750
 maximum_width 750
 own_window yes
 own_window_type override
 own_window_transparent yes
 own_window_hints undecorated,sticky,below,skip_taskbar,skip_pager
+own_window_argb_value 0
+own_window_argb_visual no
+own_window_colour 00000000
 border_inner_margin 0
 border_outer_margin 0
 alignment top_left
@@ -37,33 +40,33 @@ draw_outline false
 draw_shades false
 
 default_color DCDCDC
-color0 5294e2
+color0 1b93d1
 color1 DDDDDD
 
 
 
 TEXT
-${font xos4 Terminus:bold:pixelsize=12}${color0}     mod+Enter  ${color1}-  xfce4-terminal root
-${font xos4 Terminus:bold:pixelsize=12}${color0}     mod+Shift+z  ${color1}-  xfce4-terminal user
-${font xos4 Terminus:bold:pixelsize=12}${color0}     mod+Shift+q  ${color1}-  kill
-${font xos4 Terminus:bold:pixelsize=12}${color0}     mod+d  ${color1}-  dmenu
-${font xos4 Terminus:bold:pixelsize=12}${color0}     mod+f ${color1}-  fullscreen
+${font Unifont:bold:pixelsize=11}${color0}     mod+Enter  ${color1}-  xfce4-terminal root
+${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+z  ${color1}-  xfce4-terminal user
+${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+q  ${color1}-  kill
+${font Unifont:bold:pixelsize=11}${color0}     mod+d  ${color1}-  dmenu
+${font Unifont:bold:pixelsize=11}${color0}     mod+f ${color1}-  fullscreen
 
 
-${font xos4 Terminus:bold:pixelsize=12}${color0}     mod+t  ${color1}-  pcmanfm
-${font xos4 Terminus:bold:pixelsize=12}${color0}     mod+z  ${color1}-  vivaldi-snapshot
-${font xos4 Terminus:bold:pixelsize=12}${color0}     mod+x  ${color1}-  ts3client
-${font xos4 Terminus:bold:pixelsize=12}${color0}     mod+c  ${color1}-  xastir
-${font xos4 Terminus:bold:pixelsize=12}${color0}     mod+b  ${color1}-  krusader
-${font xos4 Terminus:bold:pixelsize=12}${color0}     mod+n  ${color1}-  ifconfig.sh
+${font Unifont:bold:pixelsize=11}${color0}     mod+t  ${color1}-  pcmanfm
+${font Unifont:bold:pixelsize=11}${color0}     mod+z  ${color1}-  vivaldi-snapshot
+${font Unifont:bold:pixelsize=11}${color0}     mod+x  ${color1}-  ts3client
+${font Unifont:bold:pixelsize=11}${color0}     mod+c  ${color1}-  xastir
+${font Unifont:bold:pixelsize=11}${color0}     mod+b  ${color1}-  krusader
+${font Unifont:bold:pixelsize=11}${color0}     mod+n  ${color1}-  ifconfig.sh
 
 
-${font xos4 Terminus:bold:pixelsize=12}${color0}     mod+Shift+w  ${color1}-  reload
-${font xos4 Terminus:bold:pixelsize=12}${color0}     mod+Shift+r  ${color1}-  restart
-${font xos4 Terminus:bold:pixelsize=12}${color0}     mod+Shift+e  ${color1}-  exit
-${font xos4 Terminus:bold:pixelsize=12}${color0}     mod+Shift+p  ${color1}-  poweroff
+${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+w  ${color1}-  reload
+${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+r  ${color1}-  restart
+${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+e  ${color1}-  exit
+${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+p  ${color1}-  poweroff
 
 
 
-${font GE Inspira:bold:pixelsize=30}${color0} Arch-i3 ${color}Linux rolling. ${color0}${font GE Inspira:bold:pixelsize=15}${color1} Prosta, lekka dystrybucja Linuksa.
+${font GE Inspira:bold:pixelsize=30}${color0} Anarchy i3-wm ${color}Linux rolling. ${color0}${font GE Inspira:bold:pixelsize=15}${color1} Lekka i elastyczna dystrybucja.
 

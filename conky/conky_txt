@@ -1,51 +1,54 @@
-#========================================================================
-#Conky-Linux
-#author: Brahim Salem-Tunisia
-#telephone: 00216 97 95 72 72
-#========================================================================
-#Conky Anarchy i3-wm Linux rolling
-#mod: LinGruby
-#========================================================================
+conky.config = {
+--========================================================================
+--Conky-Linux
+--author: Brahim Salem-Tunisia
+--telephone: 00216 97 95 72 72
+--========================================================================
+--Conky Anarchy i3-wm Linux rolling
+--mod: LinGruby
+--========================================================================
 
-background yes
-update_interval 1.0
-total_run_times 0
-
-
-double_buffer yes
-no_buffers yes
-text_buffer_size 2048
-
-gap_x 20
-gap_y 343
-minimum_size 750 750
-maximum_width 750
-own_window yes
-own_window_type override
-own_window_transparent yes
-own_window_hints undecorated,sticky,below,skip_taskbar,skip_pager
-own_window_argb_value 0
-own_window_argb_visual no
-own_window_colour 00000000
-border_inner_margin 0
-border_outer_margin 0
-alignment top_left
-
-use_xft true
-xftalpha 0.1
-override_utf8_locale true
-
-draw_borders false
-draw_outline false
-draw_shades false
-
-default_color DCDCDC
-color0 1b93d1
-color1 DDDDDD
+	background = true,
+	update_interval = 1.0,
+	total_run_times = 0,
 
 
+	double_buffer = true,
+	no_buffers = true,
+	text_buffer_size = 2048,
 
-TEXT
+	gap_x = 20,
+	gap_y = 343,
+	minimum_width = 750, minimum_height = 750,
+	maximum_width = 750,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	own_window_hints = 'undecorated,sticky,below,skip_taskbar,skip_pager',
+	own_window_argb_value = 0,
+	own_window_argb_visual = false,
+	--own_window_colour = '#00000000',
+	border_inner_margin = 0,
+	border_outer_margin = 0,
+	alignment = 'top_left',
+
+	use_xft = true,
+	xftalpha = 0.1,
+	override_utf8_locale = true,
+
+	draw_borders = false,
+	draw_outline = false,
+	draw_shades = false,
+
+	default_color = '#DCDCDC',
+	color0 = '#1b93d1',
+	color1 = '#DDDDDD',
+
+
+
+};
+
+conky.text = [[
 ${font Unifont:bold:pixelsize=11}${color0}     mod+Enter  ${color1}-  xfce4-terminal root
 ${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+z  ${color1}-  xfce4-terminal user
 ${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+q  ${color1}-  kill
@@ -70,3 +73,4 @@ ${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+p  ${color1}-  poweroff
 
 ${font GE Inspira:bold:pixelsize=30}${color0} Anarchy i3-wm ${color}Linux rolling. ${color0}${font GE Inspira:bold:pixelsize=15}${color1} Lekka i elastyczna dystrybucja.
 
+]];

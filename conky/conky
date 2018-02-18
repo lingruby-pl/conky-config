@@ -4,7 +4,7 @@ conky.config = {
 --author: Brahim Salem-Tunisia
 --telephone: 00216 97 95 72 72
 --========================================================================
---Conky Anarchy i3-wm Linux rolling
+--Conky Arch i3-wm Linux rolling
 --mod: LinGruby
 --========================================================================
 
@@ -63,8 +63,8 @@ conky.config = {
 };
 
 conky.text = [[
-${color6}${hr 2}${image /home/lingruby/.conky/conky/anarchy-icon.png -p 0,20 -s 50x50}${image /home/lingruby/.conky/conky/Heckert_GNU_white.png -p 254,20 -s 50x50}
-${color4}$alignc  Anarchy i3-wm Linux rolling
+${color6}${hr 2}${image /home/lingruby/.conky/conky/Heckert_GNU_white.png -p 0,20 -s 50x50}${image /home/lingruby/.conky/conky/Heckert_GNU_white.png -p 254,20 -s 50x50}
+${color4}$alignc  Arch i3-wm Linux rolling
 ${color4}$alignc Lekka i elastyczna dystrybucja 
  
 ${color4}$alignc Czas pracy:  $uptime

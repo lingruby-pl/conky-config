@@ -4,7 +4,7 @@ conky.config = {
 --author: Brahim Salem-Tunisia
 --telephone: 00216 97 95 72 72
 --========================================================================
---Conky Anarchy i3-wm Linux rolling
+--Conky Arch i3-wm Linux rolling
 --mod: LinGruby
 --========================================================================
 
@@ -71,6 +71,6 @@ ${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+p  ${color1}-  poweroff
 
 
 
-${font GE Inspira:bold:pixelsize=30}${color0} Anarchy i3-wm ${color}Linux rolling. ${color0}${font GE Inspira:bold:pixelsize=15}${color1} Lekka i elastyczna dystrybucja.
+${font GE Inspira:bold:pixelsize=30}${color0} Arch i3-wm ${color}Linux rolling. ${color0}${font GE Inspira:bold:pixelsize=15}${color1} Lekka i elastyczna dystrybucja.
 
 ]];

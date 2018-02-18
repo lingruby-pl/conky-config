@@ -4,7 +4,7 @@ conky.config = {
 --author: Brahim Salem-Tunisia
 --telephone: 00216 97 95 72 72
 --========================================================================
---Conky Anarchy i3-wm Linux rolling
+--Conky Arch i3-wm Linux rolling
 --mod: LinGruby
 --========================================================================
 
@@ -49,5 +49,5 @@ conky.config = {
 };
 
 conky.text = [[
-${color}${font GE Inspira:pixelsize=100}${time %k:%M:%S}${font}${voffset -65}${offset 10}${color0}${font GE Inspira:bold:pixelsize=42}${time %d} ${voffset -11}${color}${font GE Inspira:bold:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 24}${font GE Inspira:pixelsize=48}${offset -180}${time %A}${font}
+${color}${font GE Inspira:pixelsize=100}${time %k:%M:%S}${font}${voffset -68}${offset 30}${color0}${font GE Inspira:bold:pixelsize=42}${time %d} ${voffset -10}${color}${font GE Inspira:bold:pixelsize=20}${time  %B} ${time %Y}${font}${voffset 24}${font GE Inspira:pixelsize=48}${offset -160}${time %A}${font}
 ]];

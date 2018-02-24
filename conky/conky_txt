@@ -49,8 +49,8 @@ conky.config = {
 };
 
 conky.text = [[
-${font Unifont:bold:pixelsize=11}${color0}     mod+Enter  ${color1}-  xfce4-terminal root
-${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+z  ${color1}-  xfce4-terminal user
+${font Unifont:bold:pixelsize=11}${color0}     mod+Enter  ${color1}-  tilda root
+${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+z  ${color1}-  tilda user
 ${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+q  ${color1}-  kill
 ${font Unifont:bold:pixelsize=11}${color0}     mod+d  ${color1}-  dmenu
 ${font Unifont:bold:pixelsize=11}${color0}     mod+f ${color1}-  fullscreen
@@ -67,7 +67,7 @@ ${font Unifont:bold:pixelsize=11}${color0}     mod+n  ${color1}-  ifconfig.sh
 ${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+w  ${color1}-  reload
 ${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+r  ${color1}-  restart
 ${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+e  ${color1}-  exit
-${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+p  ${color1}-  poweroff
+${font Unifont:bold:pixelsize=11}${color0}     mod+Shift+s  ${color1}-  poweroff
 
 
 

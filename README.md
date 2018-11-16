@@ -1,5 +1,5 @@
 # conky-config
-My conky config i3
+My conky config
 
 conky_start.sh
 

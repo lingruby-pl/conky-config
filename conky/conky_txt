@@ -40,9 +40,9 @@ conky.config = {
 	draw_shades = false,
 
 	default_color = '#9E9E9E',
-	color0 = '#066DC1',
+	color0 = '#95a3ab',
 	color1 = '#14191d',
-	font = 'xos4 Terminus:bold:pixelsize=13',
+	font = 'Hack:bold:pixelsize=10',
 
 };
 
@@ -65,16 +65,16 @@ ${font}${color0}    [S]+z        ${color}-  vivaldi-snapshot
 ${font}${color0}    [S]+x        ${color}-  ts3client
 ${font}${color0}    [S]+c        ${color}-  xastir
 ${font}${color0}    [S]+b        ${color}-  krusader
-${font}${color0}    Ctrl+Alt+b   ${color}-  pcmanfm
 ${font}${color0}    [S]+h        ${color}-  htop
 ${font}${color0}    [S]+g        ${color}-  gotop
 ${font}${color0}    [S]+s        ${color}-  weechat
 ${font}${color0}    [S]+Shift+x  ${color}-  discord
 ${font}${color0}    [S]+Shift+c  ${color}-  kodi
 ${font}${color0}    [S]+Alt+h    ${color}-  hexchat
-${font}${color0}    [S]+Alt+m    ${color}-  messengerfordesktop
+${font}${color0}    [S]+Alt+m    ${color}-  caprine
 ${font}${color0}    [S]+Shift+d  ${color}-  dunst
 ${font}${color0}    [S]+n        ${color}-  ifconfig.sh
+${font}${color0}    Ctrl+Alt+b   ${color}-  pcmanfm
 ${font}${color0}    Ctrl+Alt+o   ${color}-  compton-toggle.sh
 ${font}${color0}    Ctrl+Alt+u   ${color}-  pavucontrol
 ${font}${color0}    Ctrl+Alt+i   ${color}-  nitrogen

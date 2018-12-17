@@ -49,7 +49,7 @@ conky.config = {
 conky.text = [[
 ${color1}${hr 2}${color}
 
-${alignc}${font Hack:bold:pixelsize=15}${color}      	${texeci 900 curl  -s 'http://pl.wttr.in/Łódź?0TKm' | head -7}
+${alignc}${font Hack:bold:pixelsize=15}${color}      	${texeci 900 curl  -s 'https://pl.wttr.in/Łódź?0TKm' | head -7}
 ${color1}${hr 2}${color}
 ${font Tamsyn:bold:pixelsize=13}${color}${alignc}K L A W I S Z E   S K R Ó T Ó W${color}${font}
 ${color1}${hr}${color}

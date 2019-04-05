@@ -7,4 +7,4 @@ conky_start.sh
 
 # Convert to the new 1.10 syntax
 
-https://github.com/brndnmtthws/conky/wiki/Convert-to-new-1.10-syntax
+https://github.com/brndnmtthws/conky/wiki/Configurations#converting-old-configs-to-110

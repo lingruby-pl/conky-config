@@ -22,8 +22,8 @@ conky.config = {
 
 	gap_x = 10,
 	gap_y = 35,
-	minimum_width = 333, minimum_height = 333,
-	maximum_width = 333,
+	minimum_width = 353, minimum_height = 353,
+	maximum_width = 353,
 	own_window = true,
 	own_window_type = 'desktop',
 	own_window_transparent = true,
@@ -64,7 +64,7 @@ conky.config = {
 
 conky.text = [[
 ${color6}${hr 2}
-${image /home/lingruby/.conky/conky/Arch_logo.png -p 0,15 -s 70x70}${image /home/lingruby/.conky/conky/bspwm_logo.png -p 264,15 -s 70x70}
+${image /home/lingruby/.conky/conky/Arch_logo.png -p 0,10 -s 70x70}${image /home/lingruby/.conky/conky/bspwm_logo.png -p 284,10 -s 70x70}
 ${color4}${alignc} Arch bspwm GNU/Linux rolling
 ${color4}${alignc} Prosta, elegancka dystrybucja
 
@@ -73,15 +73,15 @@ ${color4}${alignc} Czas pracy:  $uptime
 ${color4}${alignc}  $sysname $kernel $machine
 
 ${color6}${hr 2}${font xos4 Terminus::size=9}
-${color}Dostępne aktualizacje:     ${color1}${execi 20 pacman -Qu | wc -l}
-${color}Zainstalowane pakiety:     ${color1}${execi 20 pacman -Q | wc -l}
-${color}Ostatnia aktualizacja:     ${color1}${execi 20 grep "starting full system upgrade" /var/log/pacman.log | tail -n1| cut --bytes=2-17}
+${color}Dostępne aktualizacje:               ${color1}${execi 20 pacman -Qu | wc -l}
+${color}Zainstalowane pakiety:               ${color1}${execi 20 pacman -Q | wc -l}
+${color}Ostatnia aktualizacja:               ${color1}${execi 20 grep "starting full system upgrade" /var/log/pacman.log | tail -n1| cut --bytes=2-17}
 ${color6}${hr 2}
 ${color4}Procesor i Pamięć ${color6}${hr 2}
 ${color1}Użycie procesora  ${color0}${alignc} ${cpubar 3,81} ${alignr} ${color1}$cpu% @ ${freq_g cpu}GHz
 ${color1}Core1:  ${color0}${cpubar cpu0 3,55}  ${color1}${cpu cpu0}% ${alignr}${color1}${cpu cpu2}%  ${color0}${cpubar cpu2 3,55}${color1}  :Core3
 ${color1}Core2:  ${color0}${cpubar cpu1 3,55}  ${color1}${cpu cpu1}% ${alignr}${color1}${cpu cpu3}%  ${color0}${cpubar cpu3 3,55}${color1}  :Core4
-${color6}${cpugraph 15,333 000000 95a3ab}
+${color6}${cpugraph 15,353 000000 95a3ab}
 ${color4}Pamięć RAM ${alignr}${color1}$mem / $memmax ($memperc%)
 ${color0}${membar 3}
 ${color4}Pamięć SWAP ${alignr}${color1}$swap / $swapmax ($swapperc%)
@@ -94,9 +94,9 @@ ${color8}${top name 4}${alignr}${top cpu 4}   ${top mem 4}
 ${color1}${alignc}Temperatura:${color4} CPU: ${color1}${hwmon 0 temp 1}°C${color4} Dysk SSD: ${color1}${hddtemp /dev/sda}°C${color4} Dysk HDD: ${color1}${hddtemp /dev/sdb}°C
 ${color4}Status Baterii ${color6}${hr 2}
 ${color1}${alignr} ${if_match ${battery_percent BAT1}<15}${color ff0000}${battery_percent BAT1}% ${battery_time BAT1}${else}${color1} ${battery_percent BAT1}%  ${battery_time BAT1}${endif}
-${color0}${battery_bar 3,333 BAT1}
+${color0}${battery_bar 3,353 BAT1}
 ${color4}Dysk ${color6}${hr 2}
-${color4}Linux: ${color1} (${fs_type})    ${alignc}${color1}${fs_size /} > ${color1}${fs_used /}${color0} ${alignr}${fs_bar 3,50} ${color6}(${fs_used_perc /}%)
+${color4}Linux: ${color1} (${fs_type})    ${alignc}${color1}${fs_size /} > ${color1}${fs_used /}${color0} ${alignr}${fs_bar 3,66} ${color6}(${fs_used_perc /}%)
 ${color4}Dysk Zapis-> ${alignc}${color2}${diskio_read}/s ${alignr}${color2}${diskio_write}/s ${color4}<-Dysk Odczyt
 ${color6}${diskiograph_read 15,140 000000 95a3ab} ${alignr}${color6}${diskiograph_write 15,140 000000 434745}$color
 ${color4}Kabel ${color6}${hr 2}
@@ -104,7 +104,7 @@ ${alignc}${color4}IP: ${color1}${addr enp1s0f1}
 ${color4}Pobieranie:  ${color2}${downspeed enp1s0f1}  ${alignr} ${alignr} ${color2} ${upspeed enp1s0f1}  ${color4}:Wysyłanie
 ${color6}${downspeedgraph enp1s0f1 15,140 000000 95a3ab} ${alignr}${color6}${upspeedgraph enp1s0f1 15,140 000000 434745}
 ${color4}Pobrane: ${color4}${totaldown enp1s0f1} ${alignr}${color4}${totalup enp1s0f1} ${color6}:Wysłane
-${color4}VPN ${color6}${hr 2}
+${color4}WireGuard VPN ${color6}${hr 2}
 ${alignc}${color4}IP: ${color1}${addr wg0}
 ${color4}Pobieranie:  ${color2}${downspeed wg0}  ${alignr} ${alignr} ${color2} ${upspeed wg0}  ${color4}:Wysyłanie
 ${color6}${downspeedgraph wg0 15,140 000000 95a3ab} ${alignr}${color6}${upspeedgraph wg0 15,140 000000 434745}

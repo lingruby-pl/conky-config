@@ -18,8 +18,8 @@ conky.config = {
 
 	gap_x = 10,
 	gap_y = 35,
-	minimum_width = 333, minimum_height = 333,
-	maximum_width = 333,
+	minimum_width = 353, minimum_height = 353,
+	maximum_width = 353,
 	own_window = true,
 	own_window_type = 'desktop',
 	own_window_transparent = true,
@@ -42,16 +42,16 @@ conky.config = {
 	default_color = '#9E9E9E',
 	color0 = '#95a3ab',
 	color1 = '#14191d',
-	font = 'Hack:bold:pixelsize=10',
+	font = 'Hack:bold:pixelsize=11.5',
 
 };
 
 conky.text = [[
 ${color1}${hr 2}${color}
+${font Hack:bold:pixelsize=11.5}${color0}      	${alignc}${texeci 900 curl  -s 'https://pl.wttr.in/Łódź?0' | sed -n '2,7{s/\d27\[[0-9;]*m//g;s/^..//;s/ *$//;p}' }
 
-${alignc}${font Hack:bold:pixelsize=15}${color}      	${texeci 900 curl  -s 'https://pl.wttr.in/Łódź?0' | sed -n '2,7{s/\d27\[[0-9;]*m//g;s/^..//;s/ *$//;p}' }
 ${color1}${hr 2}${color}
-${font Tamsyn:bold:pixelsize=13}${color}${alignc}K L A W I S Z E   S K R Ó T Ó W${color}${font}
+${font Tamsyn:bold:pixelsize=11.5}${color0}${alignc}K L A W I S Z E   S K R Ó T Ó W${color}${font}
 ${color1}${hr}${color}
 ${font}${color0}    [S]+Alt+s    ${color}-  termite root
 ${font}${color0}    [S]+Shift+z  ${color}-  termite user
@@ -85,9 +85,10 @@ ${font}${color0}    [S]+y        ${color}-  reload polybar
 ${font}${color0}    [S]+Shift+r  ${color}-  restart
 ${font}${color0}    [S]+Shift+e  ${color}-  poweroff
 ${color1}${hr 2}${color0}
-${alignc}${font Tamsyn:bold:pixelsize=20}${color0} Arch Linux
-${alignc}${font Tamsyn:bold:pixelsize=20}${color0} bspwm
+${alignc}${font Tamsyn:bold:pixelsize=18}${color0} Arch Linux - bspwm
+${alignc}${font Tamsyn:bold:pixelsize=20}${color0} 
 ${alignc}${font Tamsyn:bold:pixelsize=15}${color} GNU/Linux rolling.
 ${alignc}${font Tamsyn:bold:pixelsize=15}${color} Prosta, elegancka dystrybucja.
+
 ${color1}${hr 2}${color}
 ]];

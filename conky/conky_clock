@@ -1,12 +1,15 @@
+--[[
+========================================================================
+Conky-Linux
+author: Brahim Salem-Tunisia
+telephone: 00216 97 95 72 72
+========================================================================
+Conky Arch GNU/Linux rolling
+mod: LinGruby
+--========================================================================
+]]
+
 conky.config = {
---========================================================================
---Conky-Linux
---author: Brahim Salem-Tunisia
---telephone: 00216 97 95 72 72
---========================================================================
---Conky Arch bspwm GNU/Linux rolling
---mod: LinGruby
---========================================================================
 
 	background = true,
 	update_interval = 1,
@@ -16,10 +19,10 @@ conky.config = {
 	no_buffers = true,
 	text_buffer_size = 2048,
 
-	gap_x = 10,
+	gap_x = 1,
 	gap_y = 32,
-	minimum_width = 131, minimum_height = 131,
-	maximum_width = 550,
+	minimum_width = 600, minimum_height = 130,
+	maximum_width = 600,
 	own_window = true,
 	own_window_type = 'desktop',
 	own_window_transparent = true,
@@ -32,7 +35,7 @@ conky.config = {
 	alignment = 'top_middle',
 
 	use_xft = true,
-	xftalpha = 0.1,
+	xftalpha = 1,
 	override_utf8_locale = true,
 
 	draw_borders = false,
@@ -50,7 +53,7 @@ conky.config = {
 
 conky.text = [[
 ${color2}${hr 2}
-${color}${font GE Inspira:pixelsize=80}${time %k:%M:%S}${font}${voffset -60}${offset 20}${color0}${font GE Inspira:bold:pixelsize=30}${time %d} ${voffset -5}${color}${font GE Inspira:bold:pixelsize=20}${time  %B} ${time %Y}${font}${voffset 24}${font GE Inspira:pixelsize=38}${offset -140}${time %A}${font}
+${color}${font GE Inspira:pixelsize=80}   ${time %H%M%S}${font}${voffset -55}${offset 20}${color0}${font GE Inspira:bold:pixelsize=30}${time %d} ${voffset -5}${color}${font GE Inspira:bold:pixelsize=20}${time  %B} ${time %Y}${font}${voffset 20}  ${font GE Inspira:pixelsize=38}${offset -150}${time %A}${font}
 
 ${color2}${hr 2}
 ]];

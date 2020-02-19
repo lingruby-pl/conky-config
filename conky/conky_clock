@@ -53,7 +53,7 @@ conky.config = {
 
 conky.text = [[
 ${color2}${hr 2}
-${color}${font GE Inspira:pixelsize=80}   ${time %H%M%S}${font}${voffset -55}${offset 20}${color0}${font GE Inspira:bold:pixelsize=30}${time %d} ${voffset -5}${color}${font GE Inspira:bold:pixelsize=20}${time  %B} ${time %Y}${font}${voffset 20}  ${font GE Inspira:pixelsize=38}${offset -150}${time %A}${font}
+${color}${font GE Inspira:pixelsize=76}      ${time %H%M}${font}${voffset -55}${offset 20}${color0}${font GE Inspira:bold:pixelsize=26}  ${time %d} ${voffset -0}${color}${font GE Inspira:bold:pixelsize=20} ${time  %B}  ${time %Y}${font}${voffset 24}  ${font GE Inspira:bold:pixelsize=36}${offset -150}${time %A}${font}
 
 ${color2}${hr 2}
 ]];

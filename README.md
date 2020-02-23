@@ -3,7 +3,7 @@ My conky config
 
 conky_start.sh
 
-![ScreenShot](screenshot.224.jpg "conky-config")
+![ScreenShot](screenshot.233.jpg "conky-config")
 
 # Convert to the new 1.10 syntax
 

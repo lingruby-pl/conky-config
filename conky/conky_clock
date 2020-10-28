@@ -19,12 +19,13 @@ conky.config = {
 	no_buffers = true,
 	text_buffer_size = 2048,
 
-	gap_x = 1,
-	gap_y = 32,
-	minimum_width = 600, minimum_height = 130,
-	maximum_width = 600,
+	gap_x = 380,
+	gap_y = 16,
+	minimum_width = 606, minimum_height = 106,
+	maximum_width = 606,
 	own_window = true,
-	own_window_type = 'desktop',
+	own_window_class = 'Conky',
+	own_window_type = 'override',
 	own_window_transparent = true,
 	own_window_hints = 'undecorated,sticky,below,skip_taskbar,skip_pager',
 	own_window_argb_value = 0,
@@ -32,7 +33,7 @@ conky.config = {
 	--own_window_colour = '#00000000',
 	border_inner_margin = 0,
 	border_outer_margin = 0,
-	alignment = 'top_middle',
+	alignment = 'top_right',
 
 	use_xft = true,
 	xftalpha = 1,
@@ -42,18 +43,19 @@ conky.config = {
 	draw_outline = false,
 	draw_shades = false,
 
-	default_color = '#9E9E9E',
-	color0 = '#95a3ab',
-	color1 = '#9E9E9E',
-	color2 = '#14191d',
-	color3 = '#888888',
+	default_color = '#888888',
+	color1 = '#505050',
 
 
 };
 
 conky.text = [[
-${color2}${hr 2}
-${color}${font GE Inspira:pixelsize=76}      ${time %H%M}${font}${voffset -55}${offset 20}${color0}${font GE Inspira:bold:pixelsize=26}  ${time %d} ${voffset -0}${color}${font GE Inspira:bold:pixelsize=20} ${time  %B}  ${time %Y}${font}${voffset 24}  ${font GE Inspira:bold:pixelsize=36}${offset -150}${time %A}${font}
+${color1}${hr}
+${color}${alignc}${font Hack:size=15:weight=bold}${time %a %d %b %Y   %H%M}
 
-${color2}${hr 2}
+${color}${alignc}${font Hack:size=11:weight=bold}Czas pracy:  $uptime
+${color1}${hr}
+${alignc}${color}${font Hack:size=9:weight=bold}${texeci 1200 curl  -s 'https://pl.wttr.in/Łódź?0' | sed -n '2,7{s/\d27\[[0-9;]*m//g;s/^..//;s/ *$//;p}'}
+
+${color1}${hr}
 ]];

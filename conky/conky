@@ -24,11 +24,12 @@ conky.config = {
 	text_buffer_size = 2048,
 
 	gap_x = 17,
-	gap_y = 35,
-	minimum_width = 353, minimum_height = 353,
-	maximum_width = 353,
+	gap_y = 20,
+	minimum_width = 333, minimum_height = 333,
+	maximum_width = 333,
 	own_window = true,
-	own_window_type = 'desktop',
+	own_window_class = 'Conky',
+	own_window_type = 'override',
 	own_window_transparent = true,
 	own_window_hints = 'undecorated,sticky,below,skip_taskbar,skip_pager',
 	own_window_argb_value = 0,
@@ -41,83 +42,84 @@ conky.config = {
 	draw_shades = false,
 	draw_outline = false,
 	draw_borders = false,
-	draw_graph_borders = true,
+	draw_graph_borders = false,
 
 	override_utf8_locale = true,
 	use_xft = true,
-	font = 'xos4 Terminus::size=9',
+	font = 'Hack:size=8:weight=bold',
 	xftalpha = 1,
 	uppercase = false,
 
 
-	default_color = '#9E9E9E',
-	color0 = '#95a3ab',
-	color1 = '#999999',
-	color2 = '#a7a8a8',
+	default_color = '#888888',
+	color0 = '#888888',
+	color1 = '#888888',
+	color2 = '#434745',
 	color3 = '#a54242',
-	color4 = '#9E9E9E',
-	color5 = '#95a3ab',
-	color6 = '#14191d',
+	color4 = '#888888',
+	color5 = '#A9A9A9',
+	color6 = '#505050',
 	color7 = '#777777',
 	color8 = '#555555',
-	color9 = '#9E9E9E',
+	color9 = '#999999',
 
 
 };
 
 conky.text = [[
-${color6}${hr 2}
-${image /home/lingruby/.conky/conky/Arch_logo.png -p 0,17 -s 70x70}${image /home/lingruby/.conky/conky/bspwm_logo.png -p 284,17 -s 70x70}
-${color4}${alignc} Arch bspwm GNU/Linux rolling
-${color4}${alignc} Prosta, elastyczna dystrybucja
-${color4}${alignc} która stara się zachować prostotę.
+${color6}${hr}${image /home/lingruby/.config/spectrwm/conky/anon_.png -p 0,17 -s 70x70}${image /home/lingruby/.config/spectrwm/conky/anon_.png -p 264,17 -s 70x70}
+${font Hack:size=8:weight=bold}${color4}${alignc} Arch Linux - SpectrWM
 
-${color4}${alignc}${font xos4 Terminus::size=10} Czas pracy:  $uptime
-${font xos4 Terminus::size=9}
+${color4}${alignc} GNU/Linux rolling
+${color4}${alignc} Lekka dystrybucja Linuksa.
+
 ${color4}${alignc}  $sysname $kernel $machine
-${color6}${hr 2}${font xos4 Terminus::size=9}
-${color}Dostępne aktualizacje:               ${color1}${execi 20 pacman -Qu | wc -l}
-${color}Zainstalowane pakiety:               ${color1}${execi 20 pacman -Q | wc -l}
-${color}Ostatnia aktualizacja:               ${color1}${execi 20 grep "starting full system upgrade" /var/log/pacman.log | tail -n1 | cut --bytes=2-17}
-${color6}${hr 2}
-${color4}Procesor i Pamięć ${color6}${hr 2}
-${color1}Użycie procesora  ${color0}${alignc} ${cpubar 3,81} ${alignr} ${color1}$cpu% @ ${freq_g cpu}GHz
-${color1}Core1:  ${color0}${cpubar cpu0 3,55}  ${color1}${cpu cpu0}% ${alignr}${color1}${cpu cpu2}%  ${color0}${cpubar cpu2 3,55}${color1}  :Core3
-${color1}Core2:  ${color0}${cpubar cpu1 3,55}  ${color1}${cpu cpu1}% ${alignr}${color1}${cpu cpu3}%  ${color0}${cpubar cpu3 3,55}${color1}  :Core4
-${color6}${cpugraph 15,353 000000 95a3ab}
+${color4}${color6}${hr}
+${font}${color4}Dostępne aktualizacje:               ${color1}${execi 20 cat /tmp/pak-checkupdates | wc -l}
+${color4}Zainstalowane pakiety:               ${color1}${execi 20 pacman -Q | wc -l}
+${color4}Ostatnia aktualizacja:               ${color1}${execi 20 grep "starting full system upgrade" /var/log/pacman.log | tail -n1 | cut --bytes=2-17}
+${color4}${color6}${hr}
+${color4}Procesor i Pamięć: ${color6}${hr}
+${color1}  Użycie procesora  ${color2}${alignc} ${cpubar 4,88} ${alignr} ${color1}$cpu% @ ${freq_g cpu}GHz
+${color1}Core1:  ${color2}${cpubar cpu0 4,55}  ${color1}${cpu cpu0}% ${alignr}${color1}${cpu cpu2}%  ${color2}${cpubar cpu2 4,55}${color1}  :Core3
+${color1}Core2:  ${color2}${cpubar cpu1 4,55}  ${color1}${cpu cpu1}% ${alignr}${color1}${cpu cpu3}%  ${color2}${cpubar cpu3 4,55}${color1}  :Core4
+
 ${color4}Pamięć RAM ${alignr}${color1}$mem / $memmax ($memperc%)
-${color0}${membar 3}
+${color2}${membar 4}
 ${color4}Pamięć SWAP ${alignr}${color1}$swap / $swapmax ($swapperc%)
-${color0}${swapbar 3}
+${color2}${swapbar 4}
 ${color4}Wykorzystanie Procesora i Pamięci ${alignr} CPU%     MEM%
 ${color1}${top name 1}${alignr}${top cpu 1}   ${top mem 1}
 ${color7}${top name 2}${alignr}${top cpu 2}   ${top mem 2}
 ${color8}${top name 3}${alignr}${top cpu 3}   ${top mem 3}
 ${color8}${top name 4}${alignr}${top cpu 4}   ${top mem 4}
-${color1}${alignc}Temperatura:${color4} CPU: ${color1}${hwmon 0 temp 1}°C${color4} Dysk SSD: ${color1}${hddtemp /dev/sda}°C${color4} Dysk HDD: ${color1}${hddtemp /dev/sdb}°C
-${color4}Status Baterii ${color6}${hr 2}
+${color4}${color6}${hr}
+${color4}Temperatura: ${color6}${hr}
+${color1}${alignc}${color4} CPU: ${color1}${hwmon 0 temp 1}°C${color4} Dysk SSD: ${color1}${hddtemp /dev/sda}°C${color4} Dysk HDD: ${color1}${hddtemp /dev/sdb}°C
+${color4}${color6}${hr}
+${color4}Bateria: ${color6}${hr}
 ${color1}${alignr} ${if_match ${battery_percent BAT1}<15}${color ff0000}${battery_percent BAT1}% ${battery_time BAT1}${else}${color1} ${battery_percent BAT1}%  ${battery_time BAT1}${endif}
-${color0}${battery_bar 3,353 BAT1}
-${color4}Dysk ${color6}${hr 2}
-${color4}Linux: ${color1} (${fs_type})    ${alignc}${color1}${fs_size /} > ${color1}${fs_used /}${color0} ${alignr}${fs_bar 3,66} ${color6}(${fs_used_perc /}%)
-${color4}Dysk Zapis-> ${alignc}${color2}${diskio_read}/s ${alignr}${color2}${diskio_write}/s ${color4}<-Dysk Odczyt
-${color6}${diskiograph_read 15,140 000000 95a3ab} ${alignr}${color6}${diskiograph_write 15,140 000000 434745}$color
-${color4}Kabel ${color6}${hr 2}
-${alignc}${color4}IP: ${color1}${addr enp1s0f1}
-${color4}Pobieranie:  ${color2}${downspeed enp1s0f1}  ${alignr} ${alignr} ${color2} ${upspeed enp1s0f1}  ${color4}:Wysyłanie
-${color6}${downspeedgraph enp1s0f1 15,140 000000 95a3ab} ${alignr}${color6}${upspeedgraph enp1s0f1 15,140 000000 434745}
-${color4}Pobrane: ${color4}${totaldown enp1s0f1} ${alignr}${color4}${totalup enp1s0f1} ${color6}:Wysłane
-${color4}WireGuard VPN ${color6}${hr 2}
-${alignc}${color4}IP: ${color1}${addr wg0}
-${color4}Pobieranie:  ${color2}${downspeed wg0}  ${alignr} ${alignr} ${color2} ${upspeed wg0}  ${color4}:Wysyłanie
-${color6}${downspeedgraph wg0 15,140 000000 95a3ab} ${alignr}${color6}${upspeedgraph wg0 15,140 000000 434745}
-${color4}Pobrane: ${color4}${totaldown wg0} ${alignr}${color4}${totalup wg0} ${color6}:Wysłane
-${color4}Wi-Fi ${color6}${hr 2}
-${alignc}${color4}IP: ${color1}${addr wlp2s0}
-${color4}Nazwa:  ${color1}${wireless_essid wlp2s0}  ${alignr}${color6}Prędkość:  ${color1}${wireless_bitrate wlp2s0}
-${color1}${alignc}${color7}Sygnał:  ${color1}${wireless_link_qual_perc wlp2s0}%   ${color0}${wireless_link_bar 3,75 wlp2s0}
-${color4}Pobieranie:  ${color2}${downspeed wlp2s0}  ${alignr} ${alignr} ${color2} ${upspeed wlp2s0}  ${color4}:Wysyłanie
-${color6}${downspeedgraph wlp2s0 15,140 000000 95a3ab} ${alignr}${color6}${upspeedgraph wlp2s0 15,140 000000 434745}
-${color4}Pobrane: ${color4}${totaldown wlp2s0} ${alignr}${color4}${totalup wlp2s0} ${color6}:Wysłane
-${color6}${hr 2}
+${color2}${battery_bar 4,333 BAT1}
+${color4}${color6}${hr}
+${color4}Dysk: ${color6}${hr}
+${color4}Linux: ${color1} (${fs_type})    ${alignc}${color1}${fs_size /} > ${color1}${fs_used /}${color2} ${alignr}${fs_bar 3,66} ${color4}(${fs_used_perc /}%)
+${color4}Dysk Zapis-> ${alignc}${color1}${diskio_read}/s ${alignr}${color1}${diskio_write}/s ${color4}<-Dysk Odczyt
+${color4}${color6}${hr}
+${color4}Net Kabel: ${color6}${hr}
+${alignc}${color4}IP:  ${color1}${addr enp1s0f1}
+${color4}Pobieranie:  ${color1}${downspeed enp1s0f1}  ${alignr} ${alignr} ${color1} ${upspeed enp1s0f1}  ${color4}:Wysyłanie
+${color4}Pobrane: ${color1}${totaldown enp1s0f1} ${alignr}${color1}${totalup enp1s0f1} ${color4}:Wysłane
+${color4}${color6}${hr}
+${color4}WireGuad VPN: ${color6}${hr}
+${alignc}${color4}IP:  ${color1}${addr wg0}
+${color4}Pobieranie:  ${color1}${downspeed wg0}  ${alignr} ${alignr} ${color1} ${upspeed wg0}  ${color4}:Wysyłanie
+${color4}Pobrane: ${color1}${totaldown wg0} ${alignr}${color1}${totalup wg0} ${color4}:Wysłane
+${color4}${color6}${hr}
+${color4}Wi-Fi: ${color6}${hr}
+${alignc}${color4}IP:  ${color1}${addr wlan0}
+${color4}Nazwa:  ${color1}${wireless_essid wlan0}  ${alignr}${color4}Prędkość:  ${color1}${wireless_bitrate wlan0}
+${color1}${alignc}${color7}Sygnał:  ${color1}${wireless_link_qual_perc wlan0}%
+${color4}Pobieranie:  ${color1}${downspeed wlan0}  ${alignr} ${alignr} ${color1} ${upspeed wlan0}  ${color4}:Wysyłanie
+${color4}Pobrane: ${color1}${totaldown wlan0} ${alignr}${color1}${totalup wlan0} ${color4}:Wysłane
+${color6}${hr}
 ]];
